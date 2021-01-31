@@ -1,0 +1,58 @@
+<testsuites name="jest tests" tests="5" failures="4" time="1.29">
+  <testsuite name="undefined" errors="0" failures="4" skipped="0" timestamp="2021-01-31T06:35:53" time="1.29" tests="5">
+    <testcase classname=" Initial UI renders correctly" name=" Initial UI renders correctly" time="0.082">
+      <failure>Error: expect(element).toHaveValue(expected)
+
+Expected the element to have value:
+  (any)
+Received:
+
+    at Object.&lt;anonymous&gt; (/home/tom/benchmarking_engineers/client/src/App.test.js:52:24)
+    at Object.asyncFn (/home/tom/benchmarking_engineers/client/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at /home/tom/benchmarking_engineers/client/node_modules/jest-jasmine2/build/queueRunner.js:38:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/home/tom/benchmarking_engineers/client/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at /home/tom/benchmarking_engineers/client/node_modules/p-map/index.js:46:16
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</failure>
+    </testcase>
+    <testcase classname=" Input not matching candidate_id shows no return percentiles" name=" Input not matching candidate_id shows no return percentiles" time="0.025">
+    </testcase>
+    <testcase classname=" Test with existing candidates" name=" Test with existing candidates" time="0.008">
+      <failure>Error: expect(element).toHaveValue([object Object])
+
+Expected the element to have value:
+  {&quot;id&quot;: 889}
+Received:
+  0
+    at /home/tom/benchmarking_engineers/client/src/App.test.js:85:38
+    at Array.forEach (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt; (/home/tom/benchmarking_engineers/client/src/App.test.js:83:14)
+    at Object.asyncFn (/home/tom/benchmarking_engineers/client/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at /home/tom/benchmarking_engineers/client/node_modules/jest-jasmine2/build/queueRunner.js:38:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/home/tom/benchmarking_engineers/client/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at /home/tom/benchmarking_engineers/client/node_modules/p-map/index.js:46:16
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</failure>
+    </testcase>
+    <testcase classname=" Test with existing candidates followed by non-existing ones" name=" Test with existing candidates followed by non-existing ones" time="0.007">
+      <failure>TypeError: candidates.get is not a function
+    at Object.&lt;anonymous&gt; (/home/tom/benchmarking_engineers/client/src/App.test.js:100:59)
+    at Object.asyncFn (/home/tom/benchmarking_engineers/client/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at /home/tom/benchmarking_engineers/client/node_modules/jest-jasmine2/build/queueRunner.js:38:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/home/tom/benchmarking_engineers/client/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at /home/tom/benchmarking_engineers/client/node_modules/p-map/index.js:46:16
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</failure>
+    </testcase>
+    <testcase classname=" Test with non-existing candidates followed by existing ones" name=" Test with non-existing candidates followed by existing ones" time="0.007">
+      <failure>TypeError: candidates.get is not a function
+    at Object.&lt;anonymous&gt; (/home/tom/benchmarking_engineers/client/src/App.test.js:122:59)
+    at Object.asyncFn (/home/tom/benchmarking_engineers/client/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at /home/tom/benchmarking_engineers/client/node_modules/jest-jasmine2/build/queueRunner.js:38:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/home/tom/benchmarking_engineers/client/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at /home/tom/benchmarking_engineers/client/node_modules/p-map/index.js:46:16
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
