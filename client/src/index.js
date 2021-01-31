@@ -4,26 +4,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-const CANDIDATES = [
-  {
-    id: 889,
-  },
-  {
-    id: 897,
-  },
-  {
-    id: 898,
-  },
-  {
-    id: 908,
-  },
-  {
-    id: 912,
-  },
-  {
-    id: 913,
-  },
-];
+const CANDIDATES = [889, 897, 898, 908, 912, 913];
 
 
 ReactDOM.render(<App candidates={CANDIDATES}/>, document.getElementById('root'));

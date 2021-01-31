@@ -37,10 +37,11 @@
 # Cross Origin Resourse Sharing
 - CORS issue has to be addressed because I am rendering on port 8000 from data from port 5000
   -- the code to prevent CORS porblem is to have the following proxy declaration in client/package.json.
-  ``` "proxy": "http://localhost:5000"
-  ```
+
+  ``` "proxy": "http://localhost:5000" ```
+
 
 # Test React
-- A prelimnary test skeleton was started and unfortunately I could not finish that on time. I have set up testIds object where data-testid locations can be sepecified for DOM rendering.
+- A prelimnary test skeleton was started and unfortunately I could not finish that on time. I have set up testIds object where data-testid locations can be sepecified for DOM rendering testing.
 - The index.js, App.js, and Percentile.js files are added props where initial input candidate_ids can be passed along to the child components.
 - The tests logic and methodology scheme were planned. Will need some inital calculations on percentiles for large number of cases and come up with results to compare to query data result.
