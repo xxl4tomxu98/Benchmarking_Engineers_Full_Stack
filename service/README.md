@@ -46,3 +46,8 @@
 - The index.js, App.js, and Percentile.js files are added props where initial input candidate_ids can be passed along to the child components.
 - The tests logic and methodology scheme were planned. Will need some inital calculations on percentiles for large number of cases and come up with results to compare to query data result.
 - Current main concerns are user input candidate_id falls out of range so no candidate can be identified.
+
+
+# Most recent update
+- Added another better more efficient way to calculate percentile number based on simple index location on sorted score arrays, numbers will be precise and no numpy will be required and no arbitary iterative limit is needed.
+- Added CSV file import mechanism that use pyscopg2 script to automate importing from CSV files and save in DB.
