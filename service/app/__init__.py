@@ -39,6 +39,7 @@ def cal_percentile(id):
     candidate = Record.query.filter(Record.candidate_id == id).first()
     if not candidate:
       return jsonify({'communication': "no candidate_id exist", 'coding': "no candidate_id exist"})
+
     candidate_comm = candidate.communication_score
     candidate_code = candidate.coding_score
     #get company from company_id
@@ -54,9 +55,20 @@ def cal_percentile(id):
     # obtain array of the scores for the comparable company engineers with same title
     com_score_comm = [eng.communication_score for eng in same_title_eng_comparable]
     com_score_code = [eng.coding_score for eng in same_title_eng_comparable]
-    #print(com_score_comm, com_score_code)
-    comm_percentile = generate_percentile(candidate_comm, com_score_comm)
-    code_percentile = generate_percentile(candidate_code, com_score_code)
+    # scores are sorted and muted in place so that later percentile can be calculated
+    com_score_comm.sort()
+    com_score_code.sort()
+    # calculate percentile this way is better
+    for (idx, value) in enumerate(com_score_comm):
+        if value == candidate_comm:
+            comm_percentile = (idx + 1)/len(com_score_comm) * 100
+            print(value, idx, len(com_score_comm))
+    for (idx, value) in enumerate(com_score_code):
+        if value == candidate_code:
+            code_percentile = (idx + 1)/len(com_score_code) * 100
+            print(value, idx, len(com_score_code))
+    # comm_percentile = generate_percentile(candidate_comm, com_score_comm)
+    # code_percentile = generate_percentile(candidate_code, com_score_code)
     return jsonify({'communication': comm_percentile, 'coding': code_percentile})
 
 
